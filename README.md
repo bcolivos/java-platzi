@@ -1,2 +1,2 @@
-# java-bse-platzi
-Curso de java basico se - platzi
+# java-platzi
+Desarrollo de cursos de java en Platzi
