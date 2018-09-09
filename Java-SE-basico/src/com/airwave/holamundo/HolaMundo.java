@@ -93,9 +93,227 @@ public class HolaMundo {
 		
 		//Arreglos
 		//definir el tamano  de los arreglos sino no podremos usarlos
+		//mala practica hacer arrays de mas de 3 dimensiones
+		
+		/**
+		 * La diferencia entre colocar los corchetes en el tipo de variable y colocarlos en el nombre de la variable, es que 
+		 * en el primer caso todas las variables declaradas serán arreglos, 
+		 * mientras que en la segunda solo las variables con corchetes serán arreglos.
+
+		// Todas las variables declaradas serán arreglos
+		int[] arreglo1, arreglo2;
+		// Solo la variable con [] será un arreglo
+		int arreglo3[], arreglo4;
+		
+		arreglo1 = newint[4]; // Correcto
+		arreglo2 = newint[4]; // Correcto
+		arreglo3 = newint[4]; // Correcto
+		arreglo4 = newint[4]; // Error*/
+		
+		int[] intArray = new int[2];
+		double doubleArray[];
+		
+		int[][] array2D = new int[2][3];
+		
+		int[][][] array3D = new int[3][3][2];
+		
+		int[][][][] array4D = new int[1][2][3][4];
+		
+		char[][] days = {{'M', 'T', 'W'}, {'m','t', 'w'}};
+		
+		char[][][] days2 = {{{'a', 'b', 'c'}, {'a', 'b', 'c'}, {'a', 'b', 'c'}}, {{'a', 'b', 'c'}, {'a', 'b', 'c'}, {'a', 'b', 'c'}}};
+		
+		char[] names = new char[4];
+		names[0] = 'h';
+		names[1] = 'o';
+		names[2] = 'l';
+		names[3] = 'a';
+		
+		System.out.println(names[0]);
+		System.out.println(names[1]);
+		System.out.println(names[2]);
+		System.out.println(names[3]);
+		
+		char[][][][] monkey = new char[2][3][2][2];
+		monkey[1][0][0][1] = 'm';
+		System.out.println(monkey[1][0][0][1]);
+		
+		//Operadores artimeticos
+		int n1 = 1;
+		int n2 = n1 + n1;
+		System.out.println("El valor de n2 es " + n2);
+		
+		double n3 = 2.56;
+		int n4 = 9;
+		float n5 = (float)n3 + n4;
+		System.out.println(n5);
+		
+		System.out.println(n5 * 2);
+		
+		double k = 4/0.00002;
+		System.out.println(k);
+		
+		System.out.println(7 % 2);
+		
+		int f = 2;
+		int g = 3;
+		f = f + g;
+		f += g;
+		f -= g;
+		f *= g;
+		f /= g;
+		f %= g;
+		System.out.println(f);
+		
+		//Operador incremento - decremento
+		
+		int l = 3;
+		l++;	//asigna y aumenta
+		++l;	//aumenta y asigna
+		System.out.println(l);
+		
+		//Operadores de equidad
+		int v1 = 5;
+		int v2 = 4;
+		System.out.println(v1 == v2);
+		
+		//Operadores relacionales
+		System.out.println("v1 > v2 -> " + (v1 > v2));
+		System.out.println("v1 < v2 -> " + (v1 < v2));
+		System.out.println("v1 >= v2 -> " + (v1 >= v2));
+		System.out.println("v1 <= v2 -> " + (v1 <= v2));
+		
+		//Operadores logicos
+		boolean m1 = false;
+		boolean m2 = true;
+		System.out.println("m1 && m2 -> " + (m1 && m2));
+		System.out.println("m1 || m2 -> " + (m1 || m2));
+		System.out.println("!m1 -> " + (!m1));
+		System.out.println("!m2 -> " + (!m2));
+		
+		//Controles de flujo
+		//	if/else
+		
+		if(v1 > v2) {
+			//true
+			System.out.println("si es mayor");
+		}else {
+			//false
+			System.out.println("no es mayor");
+		}
+		v2 += 2;
+		if(v1 > v2) {
+			//true
+			System.out.println("si es mayor");
+		}else {
+			//false
+			System.out.println("no es mayor");
+		}
+		v1++;
+		if(v1 == v2) {
+			//true
+			System.out.println("son iguales");
+		}else {
+			//false
+			System.out.println("no es mayor");
+		}
+		
+		//	switch
+		int mes = 3;
+		switch (mes) {
+		case 1:
+			System.out.println("enero");
+			break;
+		case 2:
+			System.out.println("febrero");
+			break;
+		case 3:
+			System.out.println("marzo");
+			break;
+		default:
+			System.out.println("otro mes");
+			break;
+		}
+		
+		//	while
+		int e = 1;
+		while(e <= 5) {
+			System.out.println("e es igual a " + e);
+			e++;
+		}
+		
+		//	do while
+		int numVer = 5;
+		int intent = 0;
+		boolean ver = false;
+		do {
+			if(intent == numVer) {
+				System.out.println("Intento 5 autorizado");
+				ver = true;
+			}else {
+				System.out.println("Intento " + intent + " no autorizado");
+				intent++;
+			}
+		} while (ver != true);
+		System.out.println("luego de 5 intentos se dio autorizacion");
+		
+		int[] numeros = new int[5];
 		
 		
+		//	for
+		for(int c = 0; c < 5; c++) {
+			numeros[c] = 2 + c;
+			System.out.println("indice: " + c + " valor:" + numeros[c]);
+			
+		}
 		
+		//	foreach
+		for (int j : numeros) {
+			System.out.println(j);
+		}
+		
+		//Break
+		//La sentencia “break” termina el bucle inmediatamente, y el control del programa 
+		//se mueve a la siguiente sentencia después del bucle.
+		
+		for (int ii = 1; ii <= 10; ++ii) {      
+	         if (ii == 5) {
+	            break;
+	         }      
+	         System.out.println(ii);
+	     }
+		
+		//Continue
+		//La sentencia “continue” salta la iteración actual de un bucle.
+		
+		for (int ix = 1; ix <= 10; ++ix) {      
+	         if (ix > 4 && ix < 9) {
+	            continue;
+	         }      
+	         System.out.println(ix);
+		}
+		//Return
+	    //es usado para retornar un valor u objeto o salirse de un método. 
+		//Causando que el control del programa sea transferido a la instrucción 
+		//que invoco el metodo.     
+	    
+		if (true)
+	        return;
+
+	    // Compiler will bypass every statement 
+	    // after return
+	    System.out.println("This won't execute.");
+	    
+	    // for anidado
+	    //Definimos un array de 3 filas x 5 columnas
+        int array[][]={{1,2,3,4,5}, {6,7,8,9,10}, {11,12,13,14,15}};
+ 
+        //Recorremos el array multidimensional
+        for (int ie=0;ie<array.length;ie++){
+            for(int je=0;je<array[0].length;je++){
+                System.out.println(array[i][je]);
+            }
+        }
 		
 	}
 
