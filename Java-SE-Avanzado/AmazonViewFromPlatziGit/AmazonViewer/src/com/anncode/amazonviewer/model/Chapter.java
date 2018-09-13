@@ -61,4 +61,20 @@ public class Chapter extends Movie {
 		
 		return chapters;
 	}
+	
+	@Override
+	public void view() {
+		super.view();		// manda a llamar al codigo implementado en el padre osea en movie
+		ArrayList<Chapter> chapters = getSerie().getChapters();
+		int chapterViewedCounter = 0;
+		for (Chapter chapter : chapters) {
+			if (chapter.getIsViewed()) {
+				chapterViewedCounter++;
+			}
+		}
+		if (chapterViewedCounter == chapters.size()) {
+			getSerie().view();
+		}
+	}
+	
 }
