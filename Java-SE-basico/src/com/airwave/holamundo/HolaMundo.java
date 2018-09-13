@@ -3,6 +3,12 @@ package com.airwave.holamundo;
 public class HolaMundo {
 
 	public static void main(String[] args) {
+		
+		int i9 = 7;
+		char c9 = 'w'; 
+		System.out.println((i9 >= 6) && (c9 == 'w'));
+
+		
 		System.out.println("Hola mundo :)");
 		
 		//Datos primitivos **Todos los primitivos empizan en minuscula*
@@ -314,6 +320,8 @@ public class HolaMundo {
                 System.out.println(array[i][je]);
             }
         }
+        
+        
 		
 	}
 
