@@ -1,0 +1,1 @@
+packageSearchIndex = [{"l":"com.anncode.amazonviewer.model"}]

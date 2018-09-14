@@ -1,0 +1,1 @@
+typeSearchIndex = [{"p":"com.anncode.amazonviewer.model","l":"Chapter"}]

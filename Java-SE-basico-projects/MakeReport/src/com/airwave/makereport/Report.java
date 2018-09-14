@@ -6,6 +6,13 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.OutputStreamWriter;
 
+/**
+ * Libreria que permite generar reportes a traves de archivos en cualquier formato 
+ * utilizando el Método {@code makeReport}
+ * @author AirWave
+ * @since 2018
+ * @version 1.1
+ */
 public class Report {
 
 	private String nameFile;
