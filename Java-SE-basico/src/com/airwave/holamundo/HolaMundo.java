@@ -321,6 +321,156 @@ public class HolaMundo {
             }
         }
         
+        /*
+         * Clases anidadas (nested class / inner class)
+         * 
+         * ej)
+         * class ClaseExterio{
+         * 	
+         * 	class ClaseAnidada {
+         * 
+         * 	}
+         * }
+         * 
+         * surge a base de la necesidad de tener agrupada la logica para 
+         * ciertos modelos de clases, aveces no necesitamos que la clase 
+         * sea independiente, sino interior a otra. Tambien para anidar cosas
+         * pequenas
+         * 											Nested classes
+         * 								/												\
+         * 	 >						inner classes				<					static nested classes
+         * 	/							|						 \
+         * inner clases		method local inner classes 	Anonymous inner classes
+         * como el ej--		--clase dentro de metodo--		--como clases abstractas
+         * 
+         * Clase estatica ejemplo:
+         * 
+         * public class ClaseExterior{
+         * 		static class ClaseStaticaAnidada{
+         * 			// - no es recomendable mas de 3 clases anidadas
+         *			// - no necesitamos crear instancias para llamarlas
+         *			// - no pueden ser privados
+         *			// - solo pueden llamar metodos estaticos(de la clase exterior) dentro de estas
+         *			// - en android y en spring se usas muchas clases anidadas
+         * 		}
+         * 
+         * 		class ClaseInterna{
+         * 
+         * 		}
+         * }
+         * 
+         * ejemplo 2)
+         * 
+         * public class Enclosing {
+         * 		
+         * 		private static int x = 1;
+         * 
+         * 		public static class StaticNested {
+         * 			
+         * 			private void run() {
+         * 
+         * 				//method impl
+         * 
+         * 			}
+         * 
+         * 		}
+         * 
+         * 		@Test
+         * 		public void test() {
+         * 
+         * 		Enclosing.StaticNested nested = new Enclosing.StaticNested();
+         * 		nested.run();
+         * 
+         * 		}
+         * 
+         * }
+         * 
+         * ejemplo clases anidadas - inner
+         * 
+         * public class Outer {
+         * 
+         * 		public class Inner {
+         * 			// ...
+         * 		}
+         * 
+         * }
+         * 
+         * Instancia:
+         * Outer outer = new Outer();
+         * Outer.Inner inner = outer.new Inner();
+         * 
+         * ejemplo clases locales al metodo:
+         * 
+         * public class NewEnclosing {
+         * 
+         * 		void run() {
+         * 			class Local {
+         * 				void run() {
+         * 					//method impl
+         * 				}
+         * 			}
+         * 			Local local = new Local();
+         * 			local.run();
+         * 		}
+         * 
+         * 		@Test
+         * 		public void test() {
+         * 			NewEnclosing newEnclosing = new NewEnclosing();
+         * 			newEnclosing.run();
+         * 		}
+         * 
+         * ejemplo clases anonimas:
+         * 
+         * abstract class SimpleAbstractClass {
+         * 		abstract void run();
+         * }
+         * 
+         * public class AnonymousInnerTest {
+         * 		@Test
+         * 		public void whenRunAnonymousClass_thenCorrect() {
+         * 			SimpleAbstractClass sac = new SimpleAbstractClass(){
+         * 				void run() {
+         * 					// method impl
+         * 				}
+         * 			};
+         * 			simpleAbstractClass.run();
+         * 		}
+         * }
+         * 
+         * }
+         * 
+         * */
+        
+        //Enumerations
+        
+        /*
+         * 	Los enumerations son tipos de datos muy especiales pues es el único tipo de dato que posee una colección de constantes, al ser constantes estaremos obligados a escribirlos con mayúsculas.
+
+			Usaremos enum cada vez que necesitemos representar un conjunto fijo de constantes. Por ejemplo los días de la semana.
+
+			Así podemos declarar un enumeration usando la palabra reservada enum.
+			
+			public enumDay { SUNDAY, MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY }
+			Day.FRIDAY;
+			
+			public enumDay {
+			  SUNDAY("Domingo"),
+			  MONDAY("Lunes"),
+			  TUESDAY("Martes"),
+			  WEDNESDAY("Miercoles"),
+			  THURSDAY("Jueves"),
+			  FRIDAY("Viernes"),
+			  SATURDAY("Sabado")
+			
+			  private String spanish;
+			  private Day(String s) { spanish = s; }
+			  public String getSpanish() { return spanish; }
+			}
+			
+			Day.MONDAY  # MONDAY
+			Day.MONDAY.getSpanish()  # Lunes
+         * */
+        
         
 		
 	}
