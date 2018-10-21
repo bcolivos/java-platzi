@@ -4,10 +4,26 @@ public class HolaMundo {
 
 	public static void main(String[] args) {
 		
+		// i / 2^k
+		System.out.println(17 >> 2);// 17 / 2^2
+		
+		//i * 2^k
+		System.out.println(10 << 3);// 10 * 2^3
+		
 		int i9 = 7;
 		char c9 = 'w'; 
 		System.out.println((i9 >= 6) && (c9 == 'w'));
 
+		
+		int xtt = 0;
+		int ytt = 0;
+				
+		while (xtt<10) {
+		  ytt += xtt;
+		  xtt++;
+		}
+
+		System.out.println(ytt);
 		
 		System.out.println("Hola mundo :)");
 		
@@ -69,7 +85,7 @@ public class HolaMundo {
 		int codigo = 97;
 		char codigoASCII = (char)codigo;
 		
-		System.out.println(codigoASCII);
+		System.out.println("cod ascii: " + codigoASCII);
 		
 		//cast funciona pero byte solo almacena desde -128 hasta 127 por lo tanto si le agregamos un numero mayor
 		//recorre desde el -128 de nuevo
