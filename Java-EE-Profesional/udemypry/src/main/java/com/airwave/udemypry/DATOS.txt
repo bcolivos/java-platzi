@@ -1,0 +1,3 @@
+DOM 	= document object model "Todos los elementos dentro de la pagina web como etiquetas etc" Manipulacion del DOM
+BOM 	= browser object model "Manipular el navegador y la ventana " Manipulacion del navegador
+Evento 	= acciones en la pagina web
